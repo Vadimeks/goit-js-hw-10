@@ -1,8 +1,5 @@
 body {
     font-family: sans-serif;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
     gap: 20px;
     padding: 20px;
     background-color: #f4f4f4;
@@ -32,7 +29,9 @@ body {
 }
 
 .flatpickr-input {
-    height: 20px;
+    /* max-height: 30px; */
+    padding: 4px 20px;
+    font-size: 16px;
 }
 
 input[type="text"] {
@@ -41,8 +40,6 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     flex-grow: 1;
-    max-width: 210px;
-    max-height: 40px;
 }
 
 button[data-start] {
