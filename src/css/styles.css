@@ -5,11 +5,11 @@
   |============================
 */
 /* Common styles */
-@import url('./css/reset.css');
-@import url('./css/base.css');
-@import url('./css/container.css');
-@import url('./css/animations.css');
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
 
 /* styles of pages */
-@import url('./css/1-timer.css');
-@import url('./css/2-snackbar.css');
+@import url('./1-timer.css');
+@import url('./2-snackbar.css');
