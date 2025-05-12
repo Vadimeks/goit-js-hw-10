@@ -15,16 +15,32 @@ const secondsValue = document.querySelector('[data-seconds]');
 let userSelectedDate = null;
 let timerInterval = null;
 startButton.disabled = true;
-
+//flatpickr init
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.log(selectedDates[0]);
+    const selectedDate = selectedDates[0];
+
+    if (selectedDate && selectedDate < new Date()) {
+      iziToast.error({
+        title: 'Error',
+        message: 'Please choose a date in the future',
+        position: 'topRight',
+      });
+      startButton.disabled = true;
+      userSelectedDate = null;
+    } else if (selectedDate) {
+      userSelectedDate = selectedDate;
+      startButton.disabled = false;
+    }
   },
 };
+
+flatpickr(datetimePicker, options);
+
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
