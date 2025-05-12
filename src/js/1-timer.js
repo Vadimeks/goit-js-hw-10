@@ -1,11 +1,20 @@
-// Описаний в документації
+// imports
 import flatpickr from 'flatpickr';
-// Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
-// Описаний у документації
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
+
+// links for elements DOM
+const datetimePicker = document.querySelector('#datetime-picker');
+const startButton = document.querySelector('[data-start]');
+const daysValue = document.querySelector('[data-days]');
+const hoursValue = document.querySelector('[data-hours]');
+const minutesValue = document.querySelector('[data-minutes]');
+const secondsValue = document.querySelector('[data-seconds]');
+
+let userSelectedDate = null;
+let timerInterval = null;
+startButton.disabled = true;
 
 const options = {
   enableTime: true,
