@@ -1,0 +1,85 @@
+.feedback-form {
+    width: 408px;
+    height: 296px;
+    padding: 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+input,
+textarea {
+    width: 360px;
+    border-radius: 4px;
+    border: 1px solid rgba(128, 128, 128, 1);
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    padding: 8px 16px;
+    margin-top: 8px;
+}
+
+input {
+    margin-bottom: 16px;
+    height: 40px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+
+}
+
+button {
+    width: 95px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: rgba(78, 117, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: none;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+input:hover,
+textarea:hover {
+    border-color: rgba(0, 0, 0, 1);
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(128, 128, 128, 1);
+    outline: none;
+}
+
+textarea::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 1);
+    padding-left: 16px;
+    padding-top: 8px;
+}
+
+/* Стан hover для кнопки */
+.feedback-form button[type="submit"]:hover {
+    background-color: rgba(108, 140, 255, 1);
+}
